@@ -26,20 +26,20 @@ IF "%1"== "/g" GOTO :removefirewall
 
 
 :--------------------------------------    
-::Menu Section
-title Windows Defender Remover Script, version 12 (Terminal)
-echo Welcome to Defender Remover 12 (terminal). There are the options.
-echo If you press Y, it will remove Windows Defender and connected Windows Security Components.
-echo If you press N, it will disable Windows Defender Antivirus only.
-echo If you press E, it will enable Windows Defender Antivirus only (it works if you press N before).
-echo If you press H, it will disable Windows Defender and Security Components.
-echo If you press I, it will enable Windows Defender and Security Components.
-echo If you press F, it will add Firewall Context Menu.
-echo If you press G, it will remove Firewall Context Menu.
-echo If you press R, it will create a SystemRestore point.
-echo If you press U, it will disable UAC.
-echo The PC will reboot after the selected action is finalised.
-set /P c=Select one of the option to continue.
+::Menü Seçenekleri
+title Windows Defender Kaldırma Aracı, version 12 (Terminal)
+echo Defender Kaldırma Aracı 12 (terminal)'e Hoşgeldiniz. Seçeneklerin şunlar.
+echo Y tuşuna basarsanız, Windows Defender'ı ve bağlı Windows Güvenlik Bileşenleri'ni kaldıracak.
+echo N tuşuna basarsanız, Yalnızca Windows Defender Antivirus'ü devre dışı bırakır.
+echo E tuşuna basarsanız, Yalnızca Windows Defender Antivirus'ü etkinleştirir (öncesinde N 'ye bastıysanız çalışır).
+echo H tuşuna basarsanız, Windows Defender ve Güvenlik Bileşenleri'ni devre dışı bırakır.
+echo I tuşuna basarsanız, Windows Defender ve Güvenlik Bileşenleri'ni etkinleştirir.
+echo F tuşuna basarsanız, Firewall Bağlam Menü'sü ekler.
+echo G tuşuna basarsanız, Firewall Bağlam Menü'sünü siler.
+echo R tuşuna basarsanız, Sistem Geri Yükleme Noktası oluşturur.
+echo U tuşuna basarsanız, UAC devre dışı kalır.
+echo Seçilen eylem tamamlandıktan sonra bilgisayar yeniden başlatılacak.
+set /P c=Devam etmek için seçeneklerden birini seçin.
 if /I "%c%" EQU "Y" goto :removedef
 if /I "%c%" EQU "N" goto :tweaksdef
 if /I "%c%" EQU "E" goto :enabledef
